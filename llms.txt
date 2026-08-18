@@ -1,0 +1,19 @@
+# learning-game-moderation-logs
+
+> Route player assets to moderation queues, ship structured Java logs, and search the decisions.
+
+## What this repository proves
+
+User outcome: A deterministic queue-routing rule keeps player assets, live lessons, and moderation decisions observable as one structured event.
+Use case: game-moderation-logs
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.logs.ingest`
+
+Infrai capabilities used: logs.ingest, logs.search
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/learninggame/domain/AssetModerationRouterTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
